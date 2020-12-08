@@ -1,0 +1,32 @@
+.icon {
+    @include size (60px, 60px);
+    border-radius: 100%;
+    border: 2px solid $color-section-headers;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.icon_design {
+    background-image: url(../img/icons/design.png);
+}
+
+.icon_ideas {
+    background-image: url(../img/icons/ideas.png);
+}
+
+.icon_answer {
+    background-image: url(../img/icons/answer.png);
+}
+
+.icon_layout {
+    background-image: url(../img/icons/layout.png);
+}
+
+.icon_support {
+    background-image: url(../img/icons/support.png);
+}
+
+.icon_star {
+    background-image: url(../img/icons/star.png);
+}

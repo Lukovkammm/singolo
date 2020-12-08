@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+h1 {
+    font-family: Lato-Bold;
+    @include font ($size: 2.5rem, $height: 1.2, $weight: 700, $style: normal);
+    letter-spacing: -0.03rem;
+    text-transform: uppercase;
+    color: $color-border-white;
+
+    & sup {
+        color: $color-base-red;
+    }
+}
+
+h2 {
+    font-family: Lato-Black;
+    @include font ($size: 3rem, $height: 1.6, $weight: 900, $style: normal);
+}
+
+h3 {
+    font-family: Lato-Black;
+    @include font ($size: 1.8rem, $height: 1, $weight: 900, $style: normal);
+}
+
+.description {
+    font-family: Lato-Light;
+    @include font ($size: 1.8rem, $height: 1.6, $weight: 300, $style: normal);
+
+}

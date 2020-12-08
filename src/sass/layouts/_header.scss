@@ -1,0 +1,13 @@
+.header {
+    background-color: $color-base-blue;
+    border-bottom: 5px solid $color-border-blue;
+    
+}
+
+.header__wrapper {
+    min-height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

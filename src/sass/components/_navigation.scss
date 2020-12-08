@@ -1,0 +1,38 @@
+.navigation {
+    display: flex;
+    margin: 0;
+
+    @include font (1.2rem, 1.16, 700);
+    letter-spacing: -0.035rem;
+    text-transform: uppercase;
+
+}
+
+.navigation__link {
+    margin-right: 30px;
+    padding: 17px 0 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:not(:last-child)::after {
+        content: "•";
+        color: $color-border-white;
+        position: relative;
+        left: 15px;
+    }
+
+    & a {
+        color: $color-border-white;
+
+        &:hover {
+            @extend %transition;
+            color: $color-base-red;
+        }
+    }
+
+    &_active a {
+        color: $color-base-red;
+    }
+}
