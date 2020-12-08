@@ -5,12 +5,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    const isProduction = options.mode === 'production';
-
-    const config = {
-        mode: isProduction ? 'production' : 'development',
-        devtool: isProduction ? 'none' : 'source-map',
-        watch: !isProduction,
+    mode: process.env.NODE_ENV,
+    devtool: 'inline-source-map',
     entry: {
         main: path.resolve(__dirname, './src/index.js'),
     },
@@ -18,13 +14,18 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
+        publicPath: '/'
     },
 
     module: {
         rules: [
           {
             test: /\.scss$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            use: [
+            process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader'
+          ]
           },
 
           {
@@ -35,6 +36,11 @@ module.exports = {
               },
             ],
           },
+
+          {
+            test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+            type: 'asset/inline',
+        },
         ],
       },
 
@@ -53,5 +59,10 @@ module.exports = {
         }),
         
     ],
+
+    devServer: {  
+      contentBase: './src/img',  
+      port: 7700, 
+  } 
 
 }
