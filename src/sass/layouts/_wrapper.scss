@@ -1,5 +1,13 @@
 .wrapper {
  max-width: $width-desktop;
  margin: 0 auto;
- padding: 0 40px;   
+ padding: 60px 40px 30px;   
+
+    @include media-tablet {
+        padding: 40px 30px 30px;
+    }
+
+    @include media-tablet {
+        padding: 25px 30px;
+    }
 }

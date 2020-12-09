@@ -20,3 +20,11 @@
         flex-basis: $width;
     }
 }
+
+@mixin media-tablet {
+    @media (max-width: $width-tablet) { @content; }
+}
+  
+@mixin media-mobile {
+    @media (max-width: $width-mobile) { @content; }
+}

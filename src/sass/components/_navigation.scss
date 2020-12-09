@@ -2,9 +2,22 @@
     display: flex;
     margin: 0;
 
+    font-family: Lato-Bold;
     @include font (1.2rem, 1.16, 700);
     letter-spacing: -0.035rem;
     text-transform: uppercase;
+
+    @include media-mobile {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        flex-direction: column;
+        width: 278px;
+        height: 100vh;
+        padding: 180px 0 0 70px;
+        background-color: $color-base-blue;
+    }
 
 }
 
@@ -34,5 +47,15 @@
 
     &_active a {
         color: $color-base-red;
+    }
+
+    @include media-mobile {
+        @include font(2.4rem, 1.2, 700);
+        letter-spacing: -0.035rem;
+
+        &::after {
+            display: none;
+        }
+        
     }
 }

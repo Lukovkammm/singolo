@@ -1,0 +1,45 @@
+%hamburger__line {
+    width: 25px;
+    height: 2px;
+    background-color: $color-border-white;
+    border-radius: 5px;
+
+    content: "";
+
+}
+
+.hamburger {
+    position: relative;
+    display: none;
+    cursor: pointer;
+
+    @include media-mobile {
+        display: inline-flex;
+        z-index: 1;
+    }
+}
+
+.hamburger__line {
+    display: inline-flex;
+    align-self: center;
+    width: 25px;
+    margin-right: 30px;
+
+
+    @extend %hamburger__line;
+
+
+    &::before {
+        position: absolute;
+        top: 8px;
+        @extend %hamburger__line;
+
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 8px;
+        @extend %hamburger__line;
+    }
+}
+

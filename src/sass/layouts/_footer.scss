@@ -10,12 +10,20 @@
     align-content: center;
     align-items: center;
 
+    @include media-mobile {
+       justify-content: center;
+    }
+
 }
 
 .copyright {
     font-family: Lato-Black;
     @include font (1.3rem, 1.4, 900);
     color: $color-section-headers;
+
+    @include media-mobile {
+        display: none;
+    }
 
 }
 
