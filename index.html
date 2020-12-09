@@ -11,6 +11,10 @@
 <body>
     <header class="header">
         <div class="wrapper header__wrapper">
+            <span class="header__hamburger hamburger">
+                <span class="hamburger__line"></span>
+            </span>
+
             <h1 class="logo"><a>Singolo<sup>*</sup></a></h1>
 
             <nav class="header__navigation">
@@ -28,14 +32,12 @@
     <main>
         <section class="slider">
             <div class="wrapper slider__wrapper">
-                    <span class="slider__image slider__image_1"></span>
-                    <span class="slider__image slider__image_2"></span>
-                <div class="slider__buttons">
-                    <button type="button" class="button button_prev"><span class="visually-hidden">Previous
-                            slide</span></button>
-                    <button type="button" class="button button_next"><span class="visually-hidden">Next
-                            slide</span></button>
-                </div>
+                <button type="button" class="button button_prev"><span class="visually-hidden">Previous
+                        slide</span></button>
+                <img class="slider__image slider__image_1" src="src/img/slider/slider-1.png" alt="slider image">
+                <img class="slider__image slider__image_2" src="src/img/slider/slider-2.png" alt="slider image">
+                <button type="button" class="button button_next"><span class="visually-hidden">Next
+                        slide</span></button>
             </div>
         </section>
 
@@ -112,20 +114,20 @@
                     <span class="tag tag_bordered">Graphic Design</span>
                     <span class="tag tag_bordered">Artwork</span>
                 </div>
-                <div class="gallery layout-4-column">
-                    <img class="gallery__item" src="src/img/portfolio-1.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-2.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-3.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-4.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-5.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-6.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-7.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-8.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-9.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-10.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-11.jpg" alt="">
-                    <img class="gallery__item" src="src/img/portfolio-12.jpg" alt="">
-                </div>
+                <ul class="gallery layout-4-column">
+                    <li class="gallery__item"><img  src="src/img/portfolio-1.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-2.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-3.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-4.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-5.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-6.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-7.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-8.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-9.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-10.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-11.jpg" alt="portfolio example"></li>
+                    <li class="gallery__item"><img  src="src/img/portfolio-12.jpg" alt="portfolio example"></li>
+                </ul>
             </div>
         </section>
 
@@ -145,10 +147,7 @@
             </div>
         </footer>
     </main>
-
-
-
-    <!-- <script type="text/javascript" src="dist/bundle.js"></script>    -->
+<script src="./src/index.js"></script>
 </body>
 
 </html>
