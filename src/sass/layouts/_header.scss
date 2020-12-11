@@ -1,22 +1,19 @@
 .header {
     background-color: $color-base-blue;
     border-bottom: 5px solid $color-border-blue;
-
 }
 
 .header__wrapper {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     min-height: 90px;
     padding-top: 0;
     padding-bottom: 0;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @include media-mobile {
+    @include media-tablet {
         position: relative;
-
         min-height: 70px;
         justify-content: center;
     }

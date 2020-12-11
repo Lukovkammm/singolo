@@ -20,21 +20,17 @@
 
 .service-item {
     display: flex;
-    width: 65%;
     margin-bottom: 30px;
-
 }
 
 .service__content {
-    @include size(220px, 85px);
     margin-left: 20px;
+    @include size(73%, 85px);
     overflow: hidden;
-
 }
 
 .service-item__text {
-    font-family: Lato-Regular;
+    font-family: Lato-Regular, sans-serif;
     @include font (1.2rem, 1.8, 400);
     color: $color-section-descriptions;
-
 }

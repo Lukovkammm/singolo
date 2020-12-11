@@ -2,29 +2,24 @@
     display: inline-block;
     padding: 5px;
     margin-right: 10px;
-
+    margin-bottom: 20px;
+    font-family: Lato-Regular, sans-serif;
+    @include font (1.2rem, 1, 400);
     border: 1px solid;
     border-radius: 5px;
     cursor: pointer;
 
-    font-family: Lato-Regular;
-    @include font (1.2rem, 1, 400);
-
     &_selected {
-    border-color: $color-base-white;
-    color: $color-base-white;
-
+        border-color: $color-base-white;
+        color: $color-base-white;
     }
-    
+
     &_bordered {
-    border-color: $color-section-descriptions;
-    color: $color-section-descriptions;
-      
+        border-color: $color-section-descriptions;
+        color: $color-section-descriptions;
     }
 
     &:hover {
-    border-color: $color-border-red;
-
+        border-color: $color-border-red;
     }
 }
-

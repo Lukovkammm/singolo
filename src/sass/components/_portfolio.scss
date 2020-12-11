@@ -10,11 +10,6 @@
 .portfolio__description {
     margin-bottom: 10px;
     color: $color-section-descriptions;
-
-}
-
-.portfolio__tags {
-    margin-bottom: 20px;
 }
 
 .gallery__item {
@@ -35,7 +30,4 @@
     @include media-mobile {
         margin-bottom: 13px;
     }
-    
-
 }
-
