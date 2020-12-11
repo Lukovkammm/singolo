@@ -5,30 +5,37 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    mode: process.env.NODE_ENV,
-    devtool: 'inline-source-map',
+    mode: 'development',
+    devtool: 'source-map',
     entry: {
         main: path.resolve(__dirname, './src/index.js'),
     },
 
     output: {
+        publicPath: '',
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
     },
+
+    // resolve: {
+    //   alias: {
+    //     images: path.resolve(__dirname, 'src/img/'),
+    //   },
+    // },
 
     module: {
         rules: [
           {
             test: /\.scss$/,
             use: [
-            process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+            MiniCssExtractPlugin.loader,
             'css-loader',
             'sass-loader'
           ]
           },
 
           {
-            test: /\.(png|svg|jpe?g|gif)$/,
+            test: /\.(png|svg|jpe?g)$/,
             use: [
               {
                 loader: 'file-loader',
@@ -37,31 +44,25 @@ module.exports = {
           },
 
           {
-            test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+            test: /\.(ttf)$/,
             type: 'asset/inline',
         },
-        ],
-      },
 
+        ],
+  },
 
     plugins: [
-        new HtmlWebpackPlugin({
-            title: 'webpack Boilerplate',
-            template: path.resolve(__dirname, './index.html'), 
-            filename: 'index.html', 
-        }),
-
         new CleanWebpackPlugin(),
+
+        new HtmlWebpackPlugin({
+          template: path.resolve(__dirname, './index.html'), 
+          filename: 'index.html', 
+      }),
 
         new MiniCssExtractPlugin({
             filename: 'style.css'
         }),
         
-    ],
-
-    devServer: {  
-      contentBase: './src/img',  
-      port: 7700, 
-  } 
+    ] 
 
 }
