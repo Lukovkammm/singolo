@@ -17,12 +17,6 @@ module.exports = {
         filename: '[name].bundle.js',
     },
 
-    // resolve: {
-    //   alias: {
-    //     images: path.resolve(__dirname, 'src/img/'),
-    //   },
-    // },
-
     module: {
         rules: [
           {
@@ -31,7 +25,7 @@ module.exports = {
             MiniCssExtractPlugin.loader,
             'css-loader',
             'sass-loader'
-          ]
+            ]
           },
 
           {
@@ -39,6 +33,9 @@ module.exports = {
             use: [
               {
                 loader: 'file-loader',
+                options: {
+                  name: '[path][name].[ext]',
+                },
               },
             ],
           },
@@ -46,8 +43,7 @@ module.exports = {
           {
             test: /\.(ttf)$/,
             type: 'asset/inline',
-        },
-
+          },
         ],
   },
 
@@ -57,12 +53,10 @@ module.exports = {
         new HtmlWebpackPlugin({
           template: path.resolve(__dirname, './index.html'), 
           filename: 'index.html', 
-      }),
+        }),
 
         new MiniCssExtractPlugin({
             filename: 'style.css'
         }),
-        
     ] 
-
 }
