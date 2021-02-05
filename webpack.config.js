@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -44,6 +45,7 @@ module.exports = {
             test: /\.(ttf)$/,
             type: 'asset/inline',
           },
+
         ],
   },
 
@@ -58,5 +60,18 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'style.css'
         }),
+
+        new CopyPlugin({
+          patterns: [
+              {
+                  from: 'src/img',
+                  to: 'src/img',
+              },
+              // {
+              //     from: 'index.html',
+              //     to: 'index.html',
+              // },
+          ],
+      }),
     ] 
 }

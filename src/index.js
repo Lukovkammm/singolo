@@ -1,19 +1,5 @@
 import './sass/style.scss';
 
-import './img/portfolio-1.jpg';
-import './img/portfolio-2.jpg';
-import './img/portfolio-3.jpg';
-import './img/portfolio-4.jpg';
-import './img/portfolio-5.jpg';
-import './img/portfolio-6.jpg';
-import './img/portfolio-7.jpg';
-import './img/portfolio-8.jpg';
-import './img/portfolio-9.jpg';
-import './img/portfolio-10.jpg';
-import './img/portfolio-11.jpg';
-import './img/portfolio-12.jpg';
-import './img/slider/slider-1.png';
-import './img/slider/slider-2.png';
 
 window.onload = function () {
     switcherTags();
@@ -106,10 +92,6 @@ buttonSliderPrev.addEventListener('click', () => {
     
     backgroundColor.classList.remove(slider_active);
     backgroundColor.classList.add(slider_hide);
-
-    
-
-
 })
 
 buttonSliderNext.addEventListener('click', () => {
