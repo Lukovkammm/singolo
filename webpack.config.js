@@ -67,10 +67,6 @@ module.exports = {
                   from: 'src/img',
                   to: 'src/img',
               },
-              // {
-              //     from: 'index.html',
-              //     to: 'index.html',
-              // },
           ],
       }),
     ] 

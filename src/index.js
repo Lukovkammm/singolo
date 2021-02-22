@@ -1,6 +1,3 @@
-import './sass/style.scss';
-
-
 window.onload = function () {
     switcherTags();
 }
