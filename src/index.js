@@ -110,7 +110,7 @@ buttonSliderNext.addEventListener('click', () => {
     backgroundColor.classList.remove(currentBackground);
     backgroundColor.classList.add(backgroundColorSlider[sliderImagesIndex]);
 
-    backgroundColor.classList.add(slider_active);
-    backgroundColor.classList.remove(slider_hide);
+    backgroundColor.classList.add('slider_active');
+    if (backgroundColor.classList.contains('slider_hide')) backgroundColor.classList.remove('slider_hide');
     
 })
