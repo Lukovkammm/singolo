@@ -1,0 +1,36 @@
+.service {
+    background-color: $color-base-white;
+    border-bottom: 6px solid $color-border-white;
+}
+
+.service__title {
+    margin-bottom: 20px;
+    color: $color-section-headers;
+}
+
+.service__description {
+    margin-bottom: 40px;
+    color: $color-section-descriptions;
+}
+
+.service__subtitle {
+    margin-bottom: 8px;
+    color: $color-section-headers;
+}
+
+.service-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.service__content {
+    margin-left: 20px;
+    @include size(73%, 85px);
+    overflow: hidden;
+}
+
+.service-item__text {
+    font-family: Lato-Regular, sans-serif;
+    @include font (1.2rem, 1.8, 400);
+    color: $color-section-descriptions;
+}

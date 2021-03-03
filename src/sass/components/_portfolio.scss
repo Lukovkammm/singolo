@@ -1,0 +1,33 @@
+.portfolio {
+    background-color: $color-base-blue;
+}
+
+.portfolio__title {
+    margin-bottom: 20px;
+    color: $color-section-headers;
+}
+
+.portfolio__description {
+    margin-bottom: 10px;
+    color: $color-section-descriptions;
+}
+
+.gallery__item {
+    margin-bottom: 20px;
+
+    &:nth-child(1n+13) {
+        display: none;
+    }
+
+    &:hover {
+        box-shadow: 0 0 0 5px $color-border-blue;
+    }
+
+    &:active {
+        box-shadow: 0 0 0 5px $color-border-red;
+    }
+
+    @include media-mobile {
+        margin-bottom: 13px;
+    }
+}

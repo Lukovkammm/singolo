@@ -1,0 +1,25 @@
+.header {
+    background-color: $color-base-blue;
+    border-bottom: 5px solid $color-border-blue;
+}
+
+.header__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include media-tablet {
+        position: relative;
+        min-height: 70px;
+        justify-content: center;
+    }
+}
+
+.header__hamburger {
+    position: absolute;
+    left: 30px;
+}
